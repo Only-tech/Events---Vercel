@@ -24,7 +24,9 @@ if (session_status() == PHP_SESSION_NONE) {
         <nav class="flex sm:flex-row justify-between items-center bg-inherit [@media(max-width:730px)]:flex-wrap gap-2">
             <a href="/" class="[@media(max-width:730px)]:order-1 [@media(max-width:400px)]:[] relative text-lg font-semibold mb-2 md:mb-0 w-[75px] h-[75px] flex items-center justify-center overflow-hidden group">
                 <span class="relative z-10 hover:text-[#ff952aff] bg-[#f5f5dc] transition-colors duration-300 ease-in-out cursor-pointer">eventribe</span>
-                <div class="absolute inset-0 w-full h-[80px] bg-[url('../public/images/SplashPaintCom.svg')] group-hover:bg-[url('../public/images/SplashPaintOrange.svg')] bg-no-repeat bg-center bg-contain opacity-80 animate-pulse"></div>
+                <!-- <img class="absolute inset-0 w-full h-[80px] bg-[url('../public/images/SplashPaintCom.svg')] group-hover:bg-[url('../public/images/SplashPaintOrange.svg')] bg-no-repeat bg-center bg-contain opacity-80 " /> -->
+                <img class="absolute inset-0 w-full h-[80px] group-hover:[display:none] bg-contain animate-pulse" src="../public/images/SplashPaintCom.svg" />
+                <img class="absolute inset-0 w-full h-[80px] [display:none] group-hover:[display:block] bg-contain" src="../public/images/SplashPaintOrange.svg" />
             </a>
 
             <div class="relative flex-grow mx-4 max-w-lg [@media(max-width:730px)]:order-3">
