@@ -90,9 +90,9 @@
             </div>
 
             <div class="relative justify-center items-center mx-auto w-[150px] h-[150px]">
-                <a href="/" class="relative text-2xl font-semibold mb-2 md:mb-0 w-[100px] h-[100px] flex items-center justify-center overflow-hidden group">
-                    <span class="relative z-10 hover:text-[#ff952aff] bg-[#f5f5dc] transition-colors duration-300 ease-in-out cursor-pointer">eventribe</span>
-                    <div class="absolute inset-0 w-[100px] h-[100px] bg-[url('../public/images/SplashPaintCom.svg')] group-hover:bg-[url('../public/images/SplashPaintOrange.svg')] bg-no-repeat bg-center bg-contain opacity-80 animate-pulse"></div>
+                <a href="/" class="relative text-2xl font-semibold mb-2 md:mb-0 w-[100px] h-[100px] flex items-center justify-center group">
+                    <span class="relative z-10 group-hover:text-[#ff952aff] bg-[#f5f5dc] transition-colors duration-300 ease-in-out cursor-pointer">eventribe</span>
+                    <img class="absolute inset-0 w-full h-[100px] filter grayscale transition duration-300 ease-in-out group-hover:filter-none hover:filter-none bg-contain animate-pulse group-hover:animate-none hover:animate-none" src="../public/images/SplashPaintOrange.svg" />
                 </a>
             </div>
         </div>
