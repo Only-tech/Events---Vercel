@@ -1,0 +1,9 @@
+{
+    "name": "eventribe/events",
+    "description": "website application to manage events",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}

@@ -1,0 +1,162 @@
+@import "tailwindcss";
+/* scroll to top bouton */
+#scrollTopBtn {
+    position: fixed;
+    background-color: transparent;
+    z-index: 1000;
+    bottom: 2em;
+    right: 2em;
+    width: 3em;
+    height: 3em;
+    border: 2px #111827 solid;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out, fill 0.3s ease, color 0.3s ease-in-out;
+    animation: moveButton 3s infinite;
+}
+
+#scrollTopBtn:hover {
+    opacity: 1 !important;
+    animation: none;
+}
+
+#scrollTopBtn:active {
+    transform: scale(0.9);
+}
+
+@keyframes moveButton {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+}
+
+
+/* info bulle */
+[data-title] {
+    position: relative;
+}
+
+[data-title]::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: -2.2em;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 0.4em 0.7em;
+    transform: translateX(-30%);
+    font-family: "montserrat-regular";
+    font-size: 0.8rem !important;
+    font-weight: 500;
+    border-radius: 1.5em;
+    white-space: nowrap;
+    display: none;
+    border: 1px whitesmoke solid;
+}
+
+#scrollTopBtn[data-title]::after {
+    transform: translateX(-20%);
+    bottom: 3.6em !important;
+}
+
+[data-title]:hover::after {
+    display: block !important;
+}
+
+tbody tr:hover {
+    background-color: #09368a13;
+    overflow: hidden;
+}
+
+input:hover,
+textarea:hover {
+    background-color: #135eea09;
+    overflow: hidden;
+}
+
+
+a:active,
+button:active {
+    transform: scale(0.95);
+}
+
+#preview {
+    display: none;
+}
+
+
+
+
+
+@media (max-width: 840px) {
+    .mobile-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: fit-content;
+        background: inherit;
+        flex-direction: column;
+        gap: 1.2em !important;
+        border-radius: 1.2em;
+        padding: 2em;
+        box-shadow: inset 0 0 5px rgba(241, 237, 237, 0.6);
+        z-index: 10001;
+    }
+
+    .mobile-menu.open {
+        display: flex !important;
+        animation: slideDown 0.4s ease forwards;
+    }
+
+    @keyframes slideDown {
+        from {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f5dc;
+}
+
+.lateralScrollBar::-webkit-scrollbar-track {
+    background: #f4f7f6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff952aff;
+    border-radius: 5px;
+}
+
+.lateralScrollBar::-webkit-scrollbar-thumb {
+    background: #111827;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #eee;
+}

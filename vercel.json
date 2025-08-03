@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "functions": {
+    "api/**/*.php": {
+      "runtime": "vercel-php@0.7.4"
+    }
+  },
+  "routes": [
+    { "src": "/", "dest": "/api/index.php" },
+    
+    { "src": "/index", "dest": "/api/index.php" },
+    { "src": "/event", "dest": "/api/event_detail.php" },
+    { "src": "/register", "dest": "/api/register.php" },
+    { "src": "/login", "dest": "/api/login.php" },
+    { "src": "/logout", "dest": "/api/logout.php" },
+    { "src": "/register-event", "dest": "/api/register_event.php" },
+    { "src": "/unregister-event", "dest": "/api/unregister_event.php" },
+    { "src": "/auth-functions", "dest": "/api/auth_functions.php" },
+    { "src": "/db-connect", "dest": "/api/db_connect.php" },
+    { "src": "/event-functions", "dest": "/api/event_functions.php" },
+    { "src": "/my-events", "dest": "/api/my_events.php" },
+    { "src": "/header", "dest": "/api/header.php" },
+    { "src": "/footer", "dest": "/api/footer.php" },
+    { "src": "/legal", "dest": "/api/legal_mentions.php" },
+
+    { "src": "/admin", "dest": "/api/admin/index.php" },
+    { "src": "/admin/admin-guard", "dest": "/api/admin/admin_guard.php" },
+    { "src": "/admin/header", "dest": "/api/admin/header.php" },
+    { "src": "/admin/footer", "dest": "/api/admin/footers.php" },
+    { "src": "/admin/manage-events", "dest": "/api/admin/manage_events.php" },
+    { "src": "/admin/manage-users", "dest": "/api/admin/manage_users.php" },
+    { "src": "/admin/manage-registrations", "dest": "/api/admin/manage_registrations.php" },
+
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/public/(.*)", "dest": "/$1" }
+  ]
+}
