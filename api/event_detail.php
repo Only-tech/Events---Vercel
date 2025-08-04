@@ -31,7 +31,7 @@ if ($isLoggedIn) {
 
 // Calcule les places restantes
 $registeredCount = count(getParticipantsForEvent($eventId));
-$remainingSeats = $event['available_seats'] - $registeredCount;
+$remainingSeats = $event['available_seats'];
 ?>
 
 <div class="p-3 bg-[rgb(248,248,236)] rounded-lg shadow-lg md:p-8 xl:max-w-7xl mx-auto items-center">
